@@ -18,40 +18,44 @@ body {
     height: 200px;
 }
 
-.head-profile {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
-    height: 200px;
-    max-width: 1200px;
-    margin: auto;
-    @include medq($break-m) {
-        flex-direction: row;
-        justify-content: flex-start;
-        padding-left: 20px;
-      }
-
-}
-
-.head-text {
-    @include flex($dir: column, $just: flex-end) {
-        align-self: flex-start;
-    }
-    text-align: center;
-    margin-left: 10px;
-    color: $white;
-    @include medq($break-m) {
-        order: 5;
+.head {
+        &-profile {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        justify-content: flex-end;
         height: 200px;
-        margin-left: 140px;
+        max-width: 1200px;
+        margin: auto;
+        @include medq($break-m) {
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+    }
+        &-text {
+            @include flex($dir: column, $just: flex-end) {
+                align-self: flex-start;
+            }
+            text-align: center;
+            margin-left: 10px;
+            color: $white;
+            @include medq($break-m) {
+                order: 5;
+                height: 200px;
+                margin-left: 140px;
+            }
     }
 }
+
+
 
 .top-contain {
+    height: auto;
     @include flex($dir: column);
     @include medq($break-m) {
         flex-direction: row-reverse;
+        margin-top: 20px;
     }
 }
 
@@ -61,10 +65,14 @@ body {
     height: auto;
     @include flex();
     @include medq($break-m) {
-        justify-content: flex-end;
+        align-content: center;
         max-width: 1200px;
         margin: 10px auto;
     }
+}
+
+.contact-btns {
+    justify-content: space-between;
 }
 
 .left-icons,
@@ -93,21 +101,28 @@ body {
     }
 }
 
-button {
-    margin: 20px auto 10px;
+
+.message button,
+.follow button {
+    @include flex($dir: row, $just: space-around) {
+        align-items: center;
+    };
+    margin:  auto;
     background-color: $base;
     color: $text-primary;
+    height: 30px;
     padding: 4px;
-    width: 80%;
+    width: 90%;
     border: none;
     border-radius: 4px;
-
+    align-self: center;
+    font-size: 0.6em;
 }
 
 .message,
 .follow {
+    padding: 0px 10px;
     @include medq($break-m) {
         width: 200px;
-         border: 1px solid;
     }
 }
