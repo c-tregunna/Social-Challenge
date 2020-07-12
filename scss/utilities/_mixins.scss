@@ -14,6 +14,6 @@
     display: $disp;
     flex-direction: $dir;
     justify-content: $just;
-    align-content: $align;
+    align-items: $align;
     @content;
 }

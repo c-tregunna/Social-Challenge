@@ -496,7 +496,10 @@ body {
 @media (min-width: 768px) {
   .top-contain {
     flex-direction: row-reverse;
-    margin-top: 20px;
+    padding-top: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
   }
 }
 
@@ -504,13 +507,13 @@ body {
 .contact-btns {
   margin-top: 5px;
   height: auto;
+  padding: 8px 0px;
   display: flex;
 }
 @media (min-width: 768px) {
   .icons,
 .contact-btns {
     align-content: center;
-    max-width: 1200px;
     margin: 10px auto;
   }
 }
@@ -560,6 +563,13 @@ body {
   align-self: center;
   font-size: 0.6em;
 }
+@media (min-width: 768px) {
+  .message button,
+.follow button {
+    font-size: 0.8em;
+    justify-content: space-evenly;
+  }
+}
 
 .message,
 .follow {
@@ -572,14 +582,66 @@ body {
   }
 }
 
+.intro-text {
+  width: 94%;
+  font-size: 0.9em;
+  line-height: 18px;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  max-width: 1200px;
+  border-bottom: 1px solid #a8a6a6;
+}
+
+.post-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .post-btns {
+    justify-content: space-evenly;
+  }
+}
+
+.post-btns button {
+  width: 30%;
+  padding: 10px;
+  font-size: 0.6em;
+}
+@media (min-width: 768px) {
+  .post-btns button {
+    width: 25%;
+    font-size: 0.8em;
+  }
+}
+
+.post-btns button:hover {
+  background-color: #b6b6b9;
+}
+
+.feed {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 img.profile-image {
   border-radius: 50%;
-  height: 18%;
   border: 3px solid #FFF;
-  max-width: 100%;
+  max-width: 80%;
   align-self: center;
-  position: absolute;
-  top: 150px;
+  position: fixed;
+  top: 130px;
   box-shadow: 0px 3px 3px #5c5959;
 }
 @media (min-width: 768px) {

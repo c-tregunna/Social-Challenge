@@ -2,10 +2,6 @@ html {
     background-color: $white;
 }
 
-// * {
-//     border: 1px solid red;
-// }
-
 body {
     color: $text-primary;
 }
@@ -25,7 +21,7 @@ body {
         align-content: flex-end;
         justify-content: flex-end;
         height: 200px;
-        max-width: 1200px;
+        max-width: $max-width;
         margin: auto;
         @include medq($break-m) {
             flex-direction: row;
@@ -55,7 +51,10 @@ body {
     @include flex($dir: column);
     @include medq($break-m) {
         flex-direction: row-reverse;
-        margin-top: 20px;
+        padding-top: 20px;
+        width: 80%;
+        max-width: $max-width;
+        margin: auto;
     }
 }
 
@@ -63,10 +62,10 @@ body {
 .contact-btns {
     margin-top: 5px;
     height: auto;
+    padding: 8px 0px;
     @include flex();
     @include medq($break-m) {
         align-content: center;
-        max-width: 1200px;
         margin: 10px auto;
     }
 }
@@ -117,6 +116,10 @@ body {
     border-radius: 4px;
     align-self: center;
     font-size: 0.6em;
+    @include medq($break-m) {
+        font-size: 0.8em;
+        justify-content: space-evenly;
+    }
 }
 
 .message,
@@ -125,4 +128,47 @@ body {
     @include medq($break-m) {
         width: 200px;
     }
+}
+
+.intro-text {
+    width: 94%;
+    font-size: 0.9em;
+    line-height: 18px;
+    margin: 10px auto;
+    padding-bottom: 10px;
+    max-width: $max-width;
+    border-bottom: 1px solid lighten($text-primary, 50%);
+}
+
+.post-btns {
+    @include flex($dir: row, $just: space-around, $align: center);
+    max-width: $max-width;
+    margin: auto;
+    @include medq($break-m) {
+        justify-content: space-evenly;
+    }
+}
+
+.post-btns button {
+    width: 30%;
+    padding: 10px;
+    font-size: .6em;
+    @include medq($break-m) {
+        width: 25%;
+        font-size: 0.8em;
+    }
+}
+
+.post-btns button:hover {
+    background-color: $base-dark;
+}
+
+.feed {
+    width: 80%;
+    margin: auto;
+    @include flex($dir: column);
+}
+
+.post {
+    @include flex($dir: row, $just: space-between);
 }
