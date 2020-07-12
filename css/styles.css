@@ -598,7 +598,7 @@ body {
   justify-content: space-around;
   align-items: center;
   max-width: 1200px;
-  margin: auto;
+  margin: 20px auto;
 }
 @media (min-width: 768px) {
   .post-btns {
@@ -624,7 +624,8 @@ body {
 
 .feed {
   width: 80%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
 }
@@ -640,7 +641,7 @@ img.profile-image {
   border: 3px solid #FFF;
   max-width: 80%;
   align-self: center;
-  position: fixed;
+  position: absolute;
   top: 130px;
   box-shadow: 0px 3px 3px #5c5959;
 }
