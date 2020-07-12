@@ -409,8 +409,39 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h2.profile-name,
+h4.profile-handle {
+  margin: 5px 0;
+}
+
+h2.profile-name {
+  font-size: 0.9em;
+}
+@media (min-width: 768px) {
+  h2.profile-name {
+    font-size: 1.35em;
+  }
+}
+
+h4.profile-handle {
+  font-size: 0.8em;
+}
+@media (min-width: 768px) {
+  h4.profile-handle {
+    font-size: 1.25em;
+  }
+}
+
 html {
-  background-color: #EBEAEA;
+  background-color: #FFF;
 }
 
 body {
@@ -427,24 +458,131 @@ body {
 .head-profile {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-content: flex-end;
   justify-content: flex-end;
   height: 200px;
+  max-width: 1200px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .head-profile {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
 }
 
 .head-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-self: flex-start;
-  margin: 20px;
+  text-align: center;
+  margin-left: 10px;
   color: #FFF;
+}
+@media (min-width: 768px) {
+  .head-text {
+    order: 5;
+    height: 200px;
+    margin-left: 140px;
+  }
+}
+
+.top-contain {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .top-contain {
+    flex-direction: row-reverse;
+  }
+}
+
+.icons,
+.contact-btns {
+  margin-top: 5px;
+  height: auto;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .icons,
+.contact-btns {
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 10px auto;
+  }
+}
+
+.left-icons,
+.right-icons,
+.message,
+.follow {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .left-icons,
+.right-icons,
+.message,
+.follow {
+    width: auto;
+  }
+}
+
+.left-icons {
+  display: flex;
+}
+.right-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+button {
+  margin: 20px auto 10px;
+  background-color: #eaeaeb;
+  color: #282727;
+  padding: 4px;
+  width: 80%;
+  border: none;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .message,
+.follow {
+    width: 200px;
+    border: 1px solid;
+  }
 }
 
 img.profile-image {
   border-radius: 50%;
+  height: 18%;
   border: 3px solid #FFF;
   max-width: 100%;
   align-self: center;
   position: absolute;
-  top: 120px;
+  top: 150px;
+  box-shadow: 0px 3px 3px #5c5959;
+}
+@media (min-width: 768px) {
+  img.profile-image {
+    top: 120px;
+  }
+}
+
+.top-icons {
+  margin: 0 6%;
+  background-color: #eaeaeb;
+  border-radius: 50%;
+  padding: 6px;
+}
+@media (min-width: 768px) {
+  .top-icons {
+    height: 40px !important;
+    width: 50px !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

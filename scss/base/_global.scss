@@ -1,6 +1,10 @@
 html {
-    background-color: $base;
+    background-color: $white;
 }
+
+// * {
+//     border: 1px solid red;
+// }
 
 body {
     color: $text-primary;
@@ -17,13 +21,93 @@ body {
 .head-profile {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-content: flex-end;
     justify-content: flex-end;
     height: 200px;
+    max-width: 1200px;
+    margin: auto;
+    @include medq($break-m) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 20px;
+      }
+
 }
 
 .head-text {
-    align-self: flex-start;
-    margin: 20px;
+    @include flex($dir: column, $just: flex-end) {
+        align-self: flex-start;
+    }
+    text-align: center;
+    margin-left: 10px;
     color: $white;
+    @include medq($break-m) {
+        order: 5;
+        height: 200px;
+        margin-left: 140px;
+    }
+}
+
+.top-contain {
+    @include flex($dir: column);
+    @include medq($break-m) {
+        flex-direction: row-reverse;
+    }
+}
+
+.icons,
+.contact-btns {
+    margin-top: 5px;
+    height: auto;
+    @include flex();
+    @include medq($break-m) {
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 10px auto;
+    }
+}
+
+.left-icons,
+.right-icons,
+.message,
+.follow {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    @include medq($break-m) {
+        width: auto;
+    }
+}
+
+.left-icons {
+    @include flex();
+    @include medq($break-m) {
+        $just: space-evenly;
+     }
+}
+
+.right-icons {
+    @include flex($just: flex-end);
+    @include medq($break-m) {
+       $just: space-evenly;
+    }
+}
+
+button {
+    margin: 20px auto 10px;
+    background-color: $base;
+    color: $text-primary;
+    padding: 4px;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.message,
+.follow {
+    @include medq($break-m) {
+        width: 200px;
+         border: 1px solid;
+    }
 }
