@@ -4,6 +4,7 @@ html {
 
 body {
     color: $text-primary;
+    font-family: $font-family;
 }
 
 .main-header {
@@ -112,8 +113,8 @@ body {
     height: 30px;
     padding: 4px;
     width: 90%;
-    border: none;
-    border-radius: 4px;
+    transition: background-color .4s ease-in, box-shadow .4s ease-in;
+    @include btn;
     align-self: center;
     font-size: 0.6em;
     @include medq($break-m) {
@@ -150,26 +151,94 @@ body {
 }
 
 .post-btns button {
+    @include btn;
+    background-color: $base;
     width: 30%;
     padding: 10px;
     font-size: .6em;
+    transition: background-color .4s ease-in, box-shadow .4s ease-in;
     @include medq($break-m) {
         width: 25%;
         font-size: 0.8em;
     }
 }
 
-.post-btns button:hover {
-    background-color: $base-dark;
+button:hover {
+    @include btnHover;
 }
 
 .feed {
     width: 80%;
     max-width: $max-width;
-    margin: 40px auto;
+    margin: 40px auto 100px;
+    overflow: hidden;
     @include flex($dir: column);
+    border-radius: 4px;;
+    box-shadow: 0 1px 4px lighten($bg, 50%);
+    padding-bottom: 20px;
 }
 
 .post {
-    @include flex($dir: row, $just: space-between);
+    @include flex($dir: row, $just: space-evenly, $align: center);
+    padding: 20px;
+}
+
+.post-op {
+    @include flex($dir: row-reverse, $just: space-around, $align: center);
+}
+
+.feed-text {
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px lighten($bg, 50%);
+    @include flex($dir: column);
+}
+
+.feed-title {
+    @include flex($dir: row, $just: space-between, $align: center);
+}
+
+.feed-title p {
+    font-weight: 600;
+}
+
+.join,
+.join-op {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    @include medqL($break-l) {
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+  }
+
+.join {
+    border-right:30px solid $base;
+    @include medqL($break-l) {
+        border-right-width: 80px;
+    }
+}
+
+.join-op {
+    border-left:30px solid $base;
+    @include medqL($break-l) {
+        border-left-width: 80px;
+    }
+}
+
+footer {
+    width: 100%;
+    @include flex($dir: row, $just: space-around);
+    background-color: $base;
+    height: auto;
+    position: fixed;
+    bottom: 0px;
+}
+
+.footer-left,
+.footer-right {
+    @include flex($dir: row, $just: space-evenly);
+    width: 40%;
 }

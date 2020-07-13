@@ -17,3 +17,13 @@
     align-items: $align;
     @content;
 }
+
+@mixin btn {
+  border-radius: 4px;
+  border: none;
+}
+
+@mixin btnHover {
+  background-color: $base-dark;
+  box-shadow: 0px 3px 3px lighten($text-primary, 20%);
+}
