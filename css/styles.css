@@ -699,8 +699,8 @@ hr {
 .join {
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   border-right: 30px solid #f29914;
 }
 @media (min-width: 1024px) {
