@@ -168,7 +168,7 @@ button:hover {
 }
 
 .feed {
-    width: 80%;
+    width: 95%;
     max-width: $max-width;
     margin: 40px auto 100px;
     overflow: hidden;
@@ -176,6 +176,9 @@ button:hover {
     border-radius: 4px;;
     box-shadow: 0 1px 4px lighten($bg, 50%);
     padding-bottom: 20px;
+    @include medq($break-m) {
+        width: 60%;
+    }
 }
 
 .post {
@@ -192,6 +195,7 @@ button:hover {
     border-radius: 6px;
     box-shadow: 0 1px 4px lighten($bg, 50%);
     @include flex($dir: column);
+    background-color: lighten($base, 45%);
 }
 
 .feed-title {
@@ -208,7 +212,7 @@ button:hover {
 }
 
 .feed-inner {
-    @include flex($dir: column, $align: center, $just: center);
+    @include flex($dir: column, $just: center);
     width: 80%;
     margin: auto;
 }

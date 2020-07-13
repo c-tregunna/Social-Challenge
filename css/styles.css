@@ -630,7 +630,7 @@ button:hover {
 }
 
 .feed {
-  width: 80%;
+  width: 95%;
   max-width: 1200px;
   margin: 40px auto 100px;
   overflow: hidden;
@@ -639,6 +639,11 @@ button:hover {
   border-radius: 4px;
   box-shadow: 0 1px 4px #b2b1c0;
   padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .feed {
+    width: 60%;
+  }
 }
 
 .post {
@@ -662,6 +667,7 @@ button:hover {
   box-shadow: 0 1px 4px #b2b1c0;
   display: flex;
   flex-direction: column;
+  background-color: #fef7ed;
 }
 
 .feed-title {
@@ -686,7 +692,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 80%;
   margin: auto;
 }
