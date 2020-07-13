@@ -19,6 +19,7 @@
 }
 
 @mixin btn {
+  background-color: lighten($base, 20%);
   border-radius: 4px;
   border: none;
 }

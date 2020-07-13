@@ -560,6 +560,7 @@ body {
   padding: 4px;
   width: 90%;
   transition: background-color 0.4s ease-in, box-shadow 0.4s ease-in;
+  background-color: #f7c375;
   border-radius: 4px;
   border: none;
   align-self: center;
@@ -609,9 +610,9 @@ body {
 }
 
 .post-btns button {
+  background-color: #f7c375;
   border-radius: 4px;
   border: none;
-  background-color: #f29914;
   width: 30%;
   padding: 10px;
   font-size: 0.6em;
@@ -823,7 +824,7 @@ img.feed-img {
 
 .top-icons {
   margin: 0 6%;
-  background-color: #f29914;
+  background-color: #f7c375;
   border-radius: 50%;
   padding: 6px;
   transition: background-color 0.4s ease-in, box-shadow 0.4s ease-in;

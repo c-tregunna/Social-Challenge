@@ -152,7 +152,7 @@ body {
 
 .post-btns button {
     @include btn;
-    background-color: $base;
+    // background-color: $base;
     width: 30%;
     padding: 10px;
     font-size: .6em;

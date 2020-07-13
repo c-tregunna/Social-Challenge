@@ -32,7 +32,7 @@ img.feed-img {
 
 .top-icons {
     margin: 0 6%;
-    background-color: $base;
+    background-color: lighten($base, 20%);
     border-radius: 50%;
     padding: 6px;
     transition: background-color .4s ease-in, box-shadow .4s ease-in;
