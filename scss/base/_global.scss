@@ -195,11 +195,28 @@ button:hover {
 }
 
 .feed-title {
-    @include flex($dir: row, $just: space-between, $align: center);
+    @include flex($dir: column, $just: space-between, $align: center);
+    padding: 0px 20px;
+    @include medq($break-m ) {
+        flex-direction: row;
+    }
 }
 
 .feed-title p {
     font-weight: 600;
+    font-size: .8em;
+}
+
+.feed-inner {
+    @include flex($dir: column, $align: center, $just: center);
+    width: 80%;
+    margin: auto;
+}
+
+hr {
+    border: 1px solid $base;
+    width: 80%;
+    margin: 15px auto;
 }
 
 .join,

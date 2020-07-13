@@ -666,13 +666,35 @@ button:hover {
 
 .feed-title {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0px 20px;
+}
+@media (min-width: 768px) {
+  .feed-title {
+    flex-direction: row;
+  }
 }
 
 .feed-title p {
   font-weight: 600;
+  font-size: 0.8em;
+}
+
+.feed-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+hr {
+  border: 1px solid #f29914;
+  width: 80%;
+  margin: 15px auto;
 }
 
 .join,
