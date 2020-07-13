@@ -45,6 +45,11 @@ img.feed-img {
 .reactions img {
     width: 20px;
     padding: 4px;
+    transition: all .3s ease-in;
+}
+
+.reactions img:hover {
+    transform: scale(1.2);
 }
 
 

@@ -267,12 +267,17 @@ hr {
       font-size: .8em;
       border-radius: 4px;
       background-color: $base;
+      transition: background-color .4s ease-in;
       @include medqL($break-l) {
           width: 80px;
           font-size: .9em;
           margin: 4px;
           padding: 0px 4px;
       }
+  }
+
+  .feed-comment a:hover {
+      background-color: lighten($base, 10%);
   }
 
 footer {

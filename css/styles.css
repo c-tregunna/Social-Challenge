@@ -757,6 +757,7 @@ hr {
   font-size: 0.8em;
   border-radius: 4px;
   background-color: #f29914;
+  transition: background-color 0.4s ease-in;
 }
 @media (min-width: 1024px) {
   .feed-comment a {
@@ -765,6 +766,10 @@ hr {
     margin: 4px;
     padding: 0px 4px;
   }
+}
+
+.feed-comment a:hover {
+  background-color: #f5ae44;
 }
 
 footer {
@@ -839,6 +844,11 @@ img.feed-img {
 .reactions img {
   width: 20px;
   padding: 4px;
+  transition: all 0.3s ease-in;
+}
+
+.reactions img:hover {
+  transform: scale(1.2);
 }
 
 .bottom-icons {
