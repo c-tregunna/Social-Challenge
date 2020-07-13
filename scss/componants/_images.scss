@@ -42,11 +42,22 @@ img.feed-img {
      }
 }
 
+.reactions img {
+    width: 20px;
+    padding: 4px;
+}
+
+
 .bottom-icons {
     height: 25px;
     margin: 0 6%;
     background-color: $base;
     padding: 10px;
+    transition: background-color .4s ease-in, box-shadow .4s ease-in;
+}
+
+.bottom-icons:hover {
+    @include btnHover;
 }
 
 .bottom-plus-icon {

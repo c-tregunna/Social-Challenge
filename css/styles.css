@@ -654,13 +654,6 @@ button:hover {
   padding: 20px;
 }
 
-.post-op {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .feed-text {
   padding: 8px;
   border-radius: 6px;
@@ -702,22 +695,11 @@ hr {
   margin: 15px auto;
 }
 
-.join,
-.join-op {
+.join {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-}
-@media (min-width: 1024px) {
-  .join,
-.join-op {
-    border-top-width: 10px;
-    border-bottom-width: 10px;
-  }
-}
-
-.join {
   border-right: 30px solid #f29914;
 }
 @media (min-width: 1024px) {
@@ -726,12 +708,61 @@ hr {
   }
 }
 
-.join-op {
-  border-left: 30px solid #f29914;
+.reactions {
+  border-top: 1px solid #e6e6e6;
+  width: 100%;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 @media (min-width: 1024px) {
-  .join-op {
-    border-left-width: 80px;
+  .reactions {
+    flex-direction: row;
+  }
+}
+
+.single-react {
+  display: flex;
+  align-items: center;
+  margin: 0px 6px;
+}
+
+.feed-comment {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 4;
+}
+
+.figures {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+@media (min-width: 1024px) {
+  .figures {
+    margin-bottom: 0px;
+  }
+}
+
+.feed-comment a {
+  color: #282727;
+  text-decoration: none;
+  margin: 2px;
+  width: 60px;
+  text-align: center;
+  font-size: 0.8em;
+  border-radius: 4px;
+  background-color: #f29914;
+}
+@media (min-width: 1024px) {
+  .feed-comment a {
+    width: 80px;
+    font-size: 0.9em;
+    margin: 4px;
+    padding: 0px 4px;
   }
 }
 
@@ -804,11 +835,22 @@ img.feed-img {
   }
 }
 
+.reactions img {
+  width: 20px;
+  padding: 4px;
+}
+
 .bottom-icons {
   height: 25px;
   margin: 0 6%;
   background-color: #f29914;
   padding: 10px;
+  transition: background-color 0.4s ease-in, box-shadow 0.4s ease-in;
+}
+
+.bottom-icons:hover {
+  background-color: #e08b0c;
+  box-shadow: 0px 3px 3px #5c5959;
 }
 
 .bottom-plus-icon {
